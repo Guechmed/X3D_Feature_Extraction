@@ -1,3 +1,4 @@
-pretrained/
+venv/
 output/
 __pycache__/
+
