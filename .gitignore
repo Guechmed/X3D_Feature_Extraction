@@ -1,8 +1,6 @@
-
+# Ignore virtual environment and large data folders
 venv/
-
 pretrained/
 output/
 samplevideos/
-
 __pycache__/
