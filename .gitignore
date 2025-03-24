@@ -1,4 +1,8 @@
-venv/
-output/
-__pycache__/
 
+venv/
+
+pretrained/
+output/
+samplevideos/
+
+__pycache__/
