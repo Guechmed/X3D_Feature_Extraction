@@ -10,8 +10,9 @@ This code can be used for the below paper. Use at your own risk since this is st
 The main resnet code and others is collected from the following repositories. 
 * [pytorch-resnet3d](https://github.com/Tushar-N/pytorch-resnet3d)
 * [pytorch-i3d-feature-extraction](https://github.com/Finspire13/pytorch-i3d-feature-extraction)
+* [I3D_Feature_Extraction_resnet] (https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet.git)
 
-I modified and combined them and also added features to make it suitable for the given task.
+  I updated the code of last repo wich already combine the first 2  repos To extract i3dfeatures  
 
 ## Overview
 This code takes a folder of videos as input and for each video it saves ```I3D``` feature numpy file of dimension ```1*n/16*2048``` where n is the no.of frames in the video
@@ -37,5 +38,6 @@ python -m utils.convert_weights pretrained/i3d_baseline_32x2_IN_pretrain_400k.pk
 
 ### Run
 ```bash
-python main.py --datasetpath=samplevideos/ --outputpath=output
+python main.py --datasetpath=dataset_path/ --outputpath=output
 ```
+put the video in a folder and add the path to that folder in the datasetpath
