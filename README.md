@@ -1,32 +1,43 @@
-# I3D_Feature_Extraction_x3d_vidoes
-This repo contains code to extract I3D features with x3d_m backbone given a folder of videos
+# X3D_Feature_Extraction
 
-This code can be used for the below paper. Use at your own risk since this is still untested.
-* [Weakly-supervised Video Anomaly Detection with Robust Temporal Feature Magnitude Learning](https://arxiv.org/pdf/2101.10030.pdf)
+This repository contains code to extract **video features using the `x3d_m` backbone**, given a folder of input videos.
+
+> ⚠️ This code is intended for research purposes .
+
+It can be used in the context of the following paper:
+
+> [**Weakly-supervised Video Anomaly Detection with Robust Temporal Feature Magnitude Learning**](https://arxiv.org/pdf/2101.10030.pdf)
 
 ---
 
+## 📦 Overview
 
+This code processes each video in a folder and saves a corresponding NumPy file containing its extracted features.
 
+- **Input**: A folder of videos or subfolders of videos  
+- **Output**: `.npy` feature file for each video  
+- **Feature shape**: `(1, n/16, 2048)` where `n` is the number of frames
 
-## Credits
-The main resnet code and others is collected from the following repositories. 
+---
 
-* [I3D_Feature_Extraction_resnet] (https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet.git)
-* [I3D_Feature_Extraction_resnet_50](https://github.com/Guechmed/I3D_Feature_Extraction_resnet_50)
+## 🔗 Credits
 
-  I updated the code to use the x3d_m as backbone instead of resnet50
+This project is based on the following repositories:
 
-## Overview
-This code takes a folder of videos as input and for each video it saves ```I3D``` feature numpy file of dimension ```1*n/16*2048``` where n is the no.of frames in the video
+- [I3D Feature Extraction with ResNet](https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet.git)  
+- [I3D Feature Extraction with ResNet-50](https://github.com/Guechmed/I3D_Feature_Extraction_resnet_50)
 
-## Usage
-### Setup
- install the requirements 
+> ✅ The backbone has been replaced with **`x3d_m`** in this version.
+
+---
+
+## ⚙️ Setup
+
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
-
 
 ### Parameters
 <pre>
