@@ -1,5 +1,5 @@
-# I3D_Feature_Extraction_resnet
-This repo contains code to extract I3D features with resnet50 backbone given a folder of videos
+# I3D_Feature_Extraction_x3d_vidoes
+This repo contains code to extract I3D features with x3d_m backbone given a folder of videos
 
 This code can be used for the below paper. Use at your own risk since this is still untested.
 * [Weakly-supervised Video Anomaly Detection with Robust Temporal Feature Magnitude Learning](https://arxiv.org/pdf/2101.10030.pdf)
@@ -11,25 +11,22 @@ This code can be used for the below paper. Use at your own risk since this is st
 
 ## Credits
 The main resnet code and others is collected from the following repositories. 
-* [pytorch-resnet3d](https://github.com/Tushar-N/pytorch-resnet3d)
-* [pytorch-i3d-feature-extraction](https://github.com/Finspire13/pytorch-i3d-feature-extraction)
-* [I3D_Feature_Extraction_resnet] (https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet.git)
 
-  I updated the code of last repo wich already combine the first 2  repos To extract i3dfeatures  
+* [I3D_Feature_Extraction_resnet] (https://github.com/GowthamGottimukkala/I3D_Feature_Extraction_resnet.git)
+* [I3D_Feature_Extraction_resnet_50](https://github.com/Guechmed/I3D_Feature_Extraction_resnet_50)
+
+  I updated the code to use the x3d_m as backbone instead of resnet50
 
 ## Overview
 This code takes a folder of videos as input and for each video it saves ```I3D``` feature numpy file of dimension ```1*n/16*2048``` where n is the no.of frames in the video
 
 ## Usage
 ### Setup
-Download pretrained weights for I3D from the nonlocal repo
+ install the requirements 
 ```bash
-wget https://dl.fbaipublicfiles.com/video-nonlocal/i3d_baseline_32x2_IN_pretrain_400k.pkl -P pretrained/
+pip install -r requirements.txt
 ```
-Convert these weights from caffe2 to pytorch. This is just a simple renaming of the blobs to match the pytorch model.
-```bash
-python -m utils.convert_weights pretrained/i3d_baseline_32x2_IN_pretrain_400k.pkl pretrained/i3d_r50_kinetics.pth
-```
+
 
 ### Parameters
 <pre>
