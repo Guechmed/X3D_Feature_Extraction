@@ -16,7 +16,7 @@ This code processes each video in a folder and saves a corresponding NumPy file 
 
 - **Input**: A folder of videos or subfolders of videos  
 - **Output**: `.npy` feature file for each video  
-- **Feature shape**: `(1, n/16, 2048)` where `n` is the number of frames
+- **Feature shape**: `(n/16, x, 2048)` where `n` is the number of frames
 
 ---
 
