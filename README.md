@@ -1,6 +1,6 @@
 # X3D_Feature_Extraction
 
-This repository contains code to extract **video features using the `x3d_m` backbone**, given a folder of input videos.
+This repository contains code to extract **video features using the `x3d_m` model, given a folder of input videos.
 
 > ⚠️ This code is intended for research purposes .
 
