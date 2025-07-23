@@ -47,10 +47,6 @@ def oversample_data(data):
     flipped_crops = [np.ascontiguousarray(c[:,:,:,::-1,:]) for c in crops]
     return [np.ascontiguousarray(c) for c in crops] + flipped_crops
 
-def get_x3d_model():
-    model = x3d_m(pretrained=True)
-    model.blocks[-1].proj = torch.nn.Identity()  # Remove final linear layer
-    return model.cuda().eval()
 
 def run_x3d(model, frequency, frames_dir, batch_size, sample_mode):
     assert sample_mode in ['oversample', 'center_crop']
